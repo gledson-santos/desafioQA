@@ -1,0 +1,42 @@
+<testsuite errors="1" failures="0" hostname="NOT1122-167" name="guia_medico.Guia Medico" skipped="0" tests="2" time="333.183091" timestamp="2019-03-03T10:28:54.391663"><testcase classname="guia_medico.Guia Medico" name="1 - Validar o retorno da pesquisa por médicos e região" status="failed" time="15.928336"><error message="'Context' object has no attribute 'driver'" type="AttributeError">
+<![CDATA[
+Failing step: Então vejo apenas médicos desta especialidade nesta região ... failed in 6.143s
+Location: features/guia_medico.feature:17
+Assertion Failed: 'Florianópolis' != 'Rio de Janeiro'
+- Florianópolis
++ Rio de Janeiro
+
+Captured stdout:
+HOOK-ERROR in after_step: AttributeError: 'Context' object has no attribute 'driver']]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Cenario: 1 - Validar o retorno da pesquisa por médicos e região
+    Dado que estou na tela guia médico ... passed in 0.191s
+    Dado que efetuo uma pesquisa por "pediatria" ... passed in 5.905s
+    Quando seleciono o estado "Rio de Janeiro" cidade "Rio de Janeiro" ... passed in 0.997s
+    E região "UNIMED RIO" ... passed in 2.692s
+    Então vejo apenas médicos desta especialidade nesta região ... failed in 6.143s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+HOOK-ERROR in after_step: AttributeError: 'Context' object has no attribute 'driver'
+
+]]>
+</system-out></testcase><testcase classname="guia_medico.Guia Medico" name="2 - Validar o retorno da pesquisa por médicos e região até a pagina 3" status="passed" time="317.254755"><system-out>
+<![CDATA[
+@scenario.begin
+  Cenario: 2 - Validar o retorno da pesquisa por médicos e região até a pagina 3
+    Dado que estou na tela guia médico ... passed in 1.306s
+    Dado que efetuo uma pesquisa por "médicos" ... passed in 0.397s
+    Quando seleciono o estado "Rio de Janeiro" cidade "Rio de Janeiro" ... passed in 0.935s
+    E região "UNIMED RIO" ... passed in 2.663s
+    Então navego até a 3 pagina ... passed in 311.953s
+    E não deve apresentar médicos da cidade "São Paulo" ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
